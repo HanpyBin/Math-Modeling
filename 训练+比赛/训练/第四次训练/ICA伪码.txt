@@ -1,0 +1,17 @@
+\caption{Function ImperialistCompetitveAlgorithm(x)}  
+\LinesNumbered  
+\textbf{Initialize} /*初始化：设置多个初始国家解X_n,n=1,...,n_max。从中选取N个最好质量的解使其作为N个帝国的殖民国家，X_1,X_2,...,X_N, 
+为每个殖民国家分配殖民国家势力比例数量的殖民地得到N个帝国E_1,E_2,...,E_N*/
+iteration = 1;
+\textbf{Repeat}
+\For{$i \in [1,N]$}{
+    EmpireAssimilate(E_i)     /*帝国同化*/ \newline
+    ColoniesRevolve(E_i)      /*殖民地革命*/ \newline
+    EmpirePosses(E_i)         /*殖民国家替换*/ \newline
+    CaculateNewCost(E_i)      /*重新计算国家权力*/ \newline
+	}
+    EmpireUnite({E_1, E_2, \dots, E_N}) /*合并相似帝国*/ \newline
+    EmpireCompetition({E_1,E_2,...,E_N}) /*帝国竞争，分配殖民地*/ \newline
+    iteration <- iteration+1; {进入下一次迭代} \newline
+        until 只有一个帝国剩下/达到迭代次数。
+        

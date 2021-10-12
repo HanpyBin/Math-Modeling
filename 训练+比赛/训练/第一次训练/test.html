@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>等值面</title>
+    <style>
+        html,
+        body,
+        #container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="container" class="container"></div>
+<script src="//webapi.amap.com/maps?v=1.4.15&key=您申请的key值&"></script>
+<script src="//webapi.amap.com/loca?v=1.3.0&key=您申请的key值"></script>
+<script src="//a.amap.com/insight/static/distrct.js"></script>
+<script>
+    var map = new AMap.Map('container', {
+        features: ['bg', 'road'],
+        mapStyle: 'amap://styles/1de318cbb8d12c02303a22c550b9ccc9',
+        zoom: 9.3,
+        pitch: 56,
+        viewMode: '2D'
+    });
+
+    var contourLayer = new Loca.ContourLayer({
+         // shape: {string}, 等高线类型 'isoband'为等高面, 'isoline'为等高线, 必填
+        shape: 'isoband',
+        map: map
+    });
+
+    // 设置等高线依赖的数据
+    // districtData: 绘制等高线时依赖的用户数据
+    contourLayer.setData(districtData, {
+        // lnglat: {string}, 数据中经纬度坐标所在的列名称, 必填
+        lnglat: 'lnglat',
+        // value: {string}, 数据中权重数据所在的列名称, 必填
+        value: 'count'
+    });
+
+    // 设置等高线属性值
+    contourLayer.setOptions({
+        // interpolation: 数据插值设置项，可缺省
+        interpolation: {
+            // step: {number}, 用于数据插值的步长，可缺省，缺省值为 500
+            // step 不宜过小，过小的 step 可能会导致绘制性能严重下降
+            step: 300,
+            // effectRadius: {number}, 每一个原始值在插值过程中影响的范围，可缺省，缺省值为 1000
+            // effectRadius / step 的值不宜过大，建议在 20 以内，可以获得良好的性能效果
+            effectRadius: 800,
+        },
+        // threshold: {number}, 等高线拆分步长，及按照用户提供的数据每隔 threshold 大小来绘制一条等高线
+        // 可缺省，缺省值为 1
+        threshold: 3,
+        // smoothNumber: {number}, 等高线平滑次数，可缺省，缺省值为 2
+        smoothNumber: 3,
+        // style: 等高线绘制样式，可缺省
+        style: {
+            // height: {number}, 3D 等高线最大高度, 可缺省，缺省值为 5 * 1E4
+            height: 5 * 1E4,
+            // color: {Array}, 绘制等高线使用的颜色序列, 可缺省，缺省值为 ["#3656CD", "#655FE7", '#20C2E1', '#23D561', '#9CD523', '#F1E229', '#FFBF3A', '#FB8C00', '#FF5252', "#BC54E2", "#FF6FCE"]
+            color: ["rgba(7,49,117,0.5)", "rgba(4,71,138,0.5)", "rgba(0,109,176,0.5)", "rgba(6,152,196,0.5)", "rgba(65,182,196,0.5)", "rgba(127,205,187,0.2)", "rgba(199,233,180,0.2)"]
+        }
+    });
+
+    contourLayer.render();
+</script>
+</body>
+</html>

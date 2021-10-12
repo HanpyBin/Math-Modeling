@@ -1,0 +1,138 @@
+/**************************************************************
+   Visit FullAhead.org and studio7designs.com for more layouts and downloads for this template!
+ **************************************************************/
+
+/*********************************************************
+   HTML Elements
+ *********************************************************/
+
+html,
+
+BODY{
+	FONT-SIZE: 12px;
+	color: #000003;
+	FONT-FAMILY:  "ËÎÌו", "Verdana", "Arial", "Helvetica", "sans-serif";
+	background-color: #FFFFFF;
+	scrollbar-face-color: #DEE3E7;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #DEE3E7;
+	scrollbar-3dlight-color: #D1D7DC;
+	scrollbar-arrow-color:  #006699;
+	scrollbar-track-color: #EFEFEF;
+	scrollbar-darkshadow-color: #98AAB1;
+	line-height: 150%;
+  text-align: center;
+	margin: 0 auto;
+}
+
+
+td{
+    FONT-FAMILY:  "ËÎÌו", "Verdana", "Arial", "Helvetica", "sans-serif";
+	FONT-SIZE: 9pt;
+	line-height: 135%;
+}
+.toptd {
+	 BORDER-top: #dedfde 1px solid; 
+}
+.m1 {
+	BORDER-left: #dedfde  1px solid; BORDER-RIGHT: #dedfde  1px solid; BORDER-TOP: #dedfde  1px solid; BORDER-BOTTOM: #dedfde  1px solid; 
+}
+a:link {
+
+	color: #336699;
+	text-decoration: underline;
+
+}
+
+a:visited {
+
+	color: #666699;
+	text-decoration: underline;
+
+}
+
+a:hover {
+
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #003399;
+
+}
+
+a:active {
+
+	color: #FFFFFF;
+	text-decoration: none;
+	background: #FF9933;
+
+}
+
+a img {
+	border-width:0;
+
+}
+
+A.TBLINK{
+	FONT-SIZE: 12PX; TEXT-DECORATION: NONE; COLOR: #555555;
+}
+A.TBLINK2{
+	FONT-SIZE: 12PX; COLOR: #555555;
+}
+A.TBLINK22{
+	FONT-SIZE: 12PX;
+
+	color: #000099;
+	text-decoration: underline;
+
+}
+.boxgreen {
+	BORDER-RIGHT: #8dc676 1px solid; BORDER-TOP: #8dc676 1px solid; BORDER-LEFT: #8dc676 1px solid; BORDER-BOTTOM: #8dc676 1px solid
+}
+HR.ee {
+	BORDER-RIGHT: 0px; BORDER-TOP: #66cc33 2px dotted; MARGIN: 5px auto 0px 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: 0px; HEIGHT: 2px; TEXT-ALIGN: left
+}
+.TdTitleLeft {
+background-image: url(images/storeleftbarpl.gif);	
+background-repeat: no-repeat; 
+height: 28px;
+width: 3px;
+}
+.TdTitleCenter {
+background-image: url(images/storeleftbarpc.gif); 
+padding: 3px 0px;
+}
+.TdTitleRight {
+background-image: url(images/storeleftbarpr.gif); 
+background-position: center right;
+background-repeat: no-repeat;
+width: 5px;
+}
+.malign img {
+	border: 0px;
+	vertical-align: middle;
+}
+.mtDropdownMenu {
+	LEFT: -1000px; OVERFLOW: hidden; POSITION: absolute; TOP: -1000px
+}
+.mtDropdownMenu .items {
+	BORDER-RIGHT: #999 0px solid; BORDER-TOP: #999 0px solid; Z-INDEX: 2; LEFT: 0px; BORDER-LEFT: #999 0px solid; BORDER-BOTTOM: #999 0px solid; POSITION: relative; TOP: 0px
+}
+.mtDropdownMenu .item {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 9pt; BORDER-BOTTOM-WIDTH: medium; BORDER-LEFT: medium none; CURSOR: hand; COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: none; EXT-DECORATION: none
+}
+.mtDropdownMenu .background {
+	Z-INDEX: 1; FILTER: alpha(opacity=60); LEFT: 0px; POSITION: absolute; TOP: 0px; moz-opacity: .8
+}
+.mtDropdownMenu .shadowRight {
+	Z-INDEX: 3; FILTER: alpha(opacity=30); WIDTH: 0px; POSITION: absolute; TOP: 0px; moz-opacity: .4
+}
+.mtDropdownMenu .shadowBottom {
+	Z-INDEX: 1; FILTER: alpha(opacity=30); LEFT: 0px; POSITION: absolute; HEIGHT: 0px; moz-opacity: .4
+}
+.mtDropdownMenu .hover {
+	BACKGROUND: #0A246a; COLOR: #FFFFFF
+}
+.mtDropdownMenu .item IMG {
+	MARGIN-LEFT: 10px
+}
+
